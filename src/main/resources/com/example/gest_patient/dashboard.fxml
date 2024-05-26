@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gest_patient.DashboardController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="179.0" layoutY="226.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="40.0" layoutY="-77.0" prefHeight="35.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="14.0" prefHeight="18.0" prefWidth="199.0" text="Hospital Management System" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="77.0" prefHeight="554.4" prefWidth="200.0" style="-fx-background-color: #096ce4; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 8, 0, 0, 0);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="55.0" layoutY="133.0" text="Welcome !" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="85.09999084472656" endY="-7.62939453125E-6" layoutX="95.0" layoutY="177.0" startX="-77.50711059570312" startY="-7.62939453125E-6" stroke="WHITE" />
+                              <Button fx:id="btnhome" layoutX="62.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleBtnHome" prefHeight="35.0" prefWidth="123.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-size: 14px; -fx-font-family: Arial; -fx-text-fill: #fff; -fx-alignment: CENTER-LEFT;" text="Home" />
+                              <Button fx:id="btnpatient" layoutX="64.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleBtnPatient" prefHeight="35.0" prefWidth="126.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-size: 14px; -fx-font-family: Arial; -fx-text-fill: #fff; -fx-alignment: CENTER-LEFT;" text="Patient" />
+                              <Button fx:id="btnmedicament" layoutX="66.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleBtnMedicament" prefHeight="35.0" prefWidth="123.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-size: 14px; -fx-font-family: Arial; -fx-text-fill: #fff; -fx-alignment: CENTER-LEFT;" text="Medicament" />
+                              <Button fx:id="btnaffecter" layoutX="72.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleBtnAffecter" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-size: 14px; -fx-font-family: Arial; -fx-text-fill: #fff; -fx-alignment: CENTER-LEFT;" text="Affecter" />
+                              <ImageView fitHeight="105.0" fitWidth="126.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/main.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="10.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/home_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="38.0" fitWidth="35.0" layoutX="12.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../../Users/fekio/Downloads/user-sign-white-icon-vector-15479703-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="49.0" fitWidth="48.0" layoutX="12.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/2927972-tendances-pilules-concepts-vectoriel-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="36.0" fitWidth="47.0" layoutX="13.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/ok-2282499_960_720-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="9.0" layoutY="491.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/logout-vector-icon-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnlogout" layoutX="72.0" layoutY="497.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-font-size: 14px; -fx-font-family: Arial; -fx-text-fill: #fff; -fx-alignment: CENTER-LEFT;" text="Logout" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="interfHome" layoutX="73.0" layoutY="143.0" prefHeight="554.4" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="140.0" prefWidth="874.0" style="-fx-background-color: #fff; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 8, 0, 0, 0);">
+                                 <children>
+                                    <AnchorPane layoutX="36.0" layoutY="14.0" prefHeight="111.0" prefWidth="235.0" style="-fx-background-color: #096ce4;">
+                                       <children>
+                                          <ImageView fitHeight="48.0" fitWidth="47.0" layoutX="13.0" layoutY="61.0">
+                                             <image>
+                                                <Image url="@../../../image/user-sign-white-icon-vector-15479703-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="nb_pat" layoutX="204.0" prefHeight="45.0" prefWidth="22.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                    <AnchorPane layoutX="595.0" layoutY="14.0" prefHeight="111.0" prefWidth="235.0" style="-fx-background-color: #096ce4;">
+                                       <children>
+                                          <ImageView fitHeight="33.0" fitWidth="49.0" layoutX="10.0" layoutY="69.0">
+                                             <image>
+                                                <Image url="@../../../image/ok-2282499_960_720-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="nb_aff" layoutX="196.0" layoutY="1.0" prefHeight="41.0" prefWidth="34.0" text="0" textFill="#fffdfd">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font></Label>
+                                       </children></AnchorPane>
+                                    <AnchorPane layoutX="319.0" layoutY="14.0" prefHeight="111.0" prefWidth="235.0" style="-fx-background-color: #096ce4;">
+                                       <children>
+                                          <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="16.0" layoutY="54.0">
+                                             <image>
+                                                <Image url="@../../../image/2927972-tendances-pilules-concepts-vectoriel-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label  fx:id="nb_med" layoutX="200.0" prefHeight="40.0" prefWidth="31.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma Bold" size="20.0" />
+                                             </font></Label>
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="13.0" layoutY="184.0" prefHeight="354.0" prefWidth="874.0" style="-fx-background-color: #fff; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 8, 0, 0, 0);">
+                                 <children>
+                                    <AreaChart layoutY="14.0" prefHeight="352.0" prefWidth="858.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="44.0" layoutY="111.0" prefHeight="554.4" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor></AnchorPane>
+                        <AnchorPane fx:id="interfMed" layoutX="3.0" layoutY="45.0" prefHeight="600.0" prefWidth="939.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="24.0" layoutY="12.0" pickOnBounds="false" prefHeight="526.0" prefWidth="266.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 8, 0, 0, 0);">
+                                 <children>
+                                    <Label layoutX="35.0" layoutY="160.0" prefHeight="18.0" prefWidth="32.0" text="ref">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ref" layoutX="80.0" layoutY="157.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-font-family: Tahoma;" />
+                                    <Label layoutX="21.0" layoutY="213.0" prefHeight="18.0" prefWidth="46.0" text="libelle">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="libelle" layoutX="80.0" layoutY="210.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-font-family: Tahoma;" />
+                                    <Label layoutX="14.0" layoutY="275.0" prefHeight="18.0" prefWidth="53.0" text="Prix">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="prix" layoutX="80.0" layoutY="272.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 4px; -fx-font-family: Tahoma;" />
+                                    <Button fx:id="ajout_med" layoutX="19.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleAjoutMedicament" style="-fx-background-color: green; -fx-text-fill: #fff;" text="Ajouter" textFill="WHITE" />
+                                    <Button fx:id="modif_med" layoutX="94.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleModifierMedicament" style="-fx-background-color: #096ce4; -fx-text-fill: #fff;" text="Modifier" />
+                                    <Button fx:id="supp_med" layoutX="176.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleSupprimerMedicament" style="-fx-background-color: red; -fx-text-fill: #fff;" text="Supprimer" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="306.0" layoutY="12.0" prefHeight="526.0" prefWidth="578.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 6, 0, 0, 0);">
+                                 <children>
+                                    <TextField fx:id="searchMed" layoutX="156.0" layoutY="22.0" prefHeight="26.0" prefWidth="265.0" style="-fx-background-color: transparent; -fx-border-color: #096ce4; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-font-size: 13px; -fx-font-family: Tahoma;" />
+                                    <TableView fx:id="tab_med" layoutX="13.0" layoutY="71.0" onMouseClicked="#handleMedicamentSelection" prefHeight="444.0" prefWidth="552.0" style="-fx-padding: 0px; -fx-background-color: transparent; -fx-border-color: #096ce4; -fx-border-width: 2px;">
+                                       <columns>
+                                          <TableColumn fx:id="col_ref" prefWidth="170.4000244140625" style="-fx-background-color: #43b0f8;" text="ref" />
+                                          <TableColumn fx:id="col_lib" prefWidth="204.0" style="-fx-background-color: #43b0f8;" text="libelle" />
+                                          <TableColumn fx:id="col_prix" minWidth="0.0" prefWidth="177.60003662109375" style="-fx-background-color: #43b0f8;" text="prix" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="interfAffect" layoutX="64.0" layoutY="55.0" prefHeight="554.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="24.0" layoutY="12.0" prefHeight="526.0" prefWidth="266.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 8, 0, 0, 0);">
+                                 <children>
+                                    <Label layoutX="6.0" layoutY="160.0" prefHeight="18.0" prefWidth="61.0" text="refMed">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="6.0" layoutY="213.0" prefHeight="18.0" prefWidth="61.0" text="CINPat">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="ajout_aff" layoutX="19.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleAjouterAffectation" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: green; -fx-text-fill: #fff;" text="Ajouter" textFill="WHITE" />
+                                    <Button fx:id="supp_aff" onAction="#handleSupprimerAff" layoutX="176.0" layoutY="367.0" mnemonicParsing="false" style="-fx-background-color: red; -fx-text-fill: #fff;" text="Supprimer" />
+                                    <ComboBox fx:id="ref_med" layoutX="78.0" layoutY="156.0" prefWidth="150.0" promptText="Choisir .." style="-fx-background-color: #fff; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+                                    <ComboBox fx:id="cin_pat" layoutX="78.0" layoutY="209.0" prefWidth="150.0" promptText="Choisir .." style="-fx-background-color: #fff; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="306.0" layoutY="12.0" prefHeight="526.0" prefWidth="578.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 6, 0, 0, 0);">
+                                 <children>
+                                    <TextField fx:id="searchaff" layoutX="156.0" layoutY="22.0" prefHeight="26.0" prefWidth="265.0" style="-fx-background-color: transparent; -fx-border-color: #096ce4; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-font-size: 13px; -fx-font-family: Tahoma;" />
+                                    <TableView fx:id="tab_aff" onMouseClicked="#handleAffecterSelection" layoutX="13.0" layoutY="71.0" prefHeight="444.0" prefWidth="552.0" style="-fx-padding: 0px; -fx-background-color: transparent; -fx-border-color: #096ce4; -fx-border-width: 2px;">
+                                       <columns>
+                                          <TableColumn fx:id="col_refmed" prefWidth="274.4000244140625" style="-fx-background-color: #43b0f8;" text="ref_Medicament" />
+                                          <TableColumn fx:id="col_cinpat" prefWidth="276.00006103515625" style="-fx-background-color: #43b0f8;" text="CIN_Patient" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="interfPat" layoutX="74.0" layoutY="65.0" prefHeight="620.0" prefWidth="960.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="24.0" layoutY="12.0" prefHeight="526.0" prefWidth="266.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 8, 0, 0, 0);">
+                                 <children>
+                                    <Label layoutX="19.0" layoutY="73.0" prefHeight="18.0" prefWidth="61.0" text="CIN">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="19.0" layoutY="133.0" prefHeight="18.0" prefWidth="61.0" text="Nom">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="ajout" layoutX="19.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleAjout" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: green; -fx-text-fill: #fff;" text="Ajouter" textFill="WHITE" />
+                                    <Button fx:id="modifier" layoutX="94.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleModifier" style="-fx-background-color: #096ce4; -fx-text-fill: #fff;" text="Modifier" />
+                                    <Button fx:id="supprimer" layoutX="176.0" layoutY="367.0" mnemonicParsing="false" onAction="#handleSupprimer" style="-fx-background-color: red; -fx-text-fill: #fff;" text="Supprimer" />
+                                    <Label layoutX="19.0" layoutY="184.0" prefHeight="18.0" prefWidth="61.0" text="Prenom">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="19.0" layoutY="235.0" prefHeight="18.0" prefWidth="61.0" text="Sexe">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="19.0" layoutY="278.0" prefHeight="18.0" prefWidth="61.0" text="Tel">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="cin" layoutX="81.0" layoutY="70.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+                                    <TextField fx:id="tel" layoutX="81.0" layoutY="272.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+                                    <TextField fx:id="sexe" layoutX="81.0" layoutY="229.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+                                    <TextField fx:id="prenom" layoutX="81.0" layoutY="178.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+                                    <TextField fx:id="nom" layoutX="79.0" layoutY="127.0" style="-fx-background-color: transparent; -fx-border-color: pink; -fx-border-width: 2px; -fx-border-radius: 5px;" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="306.0" layoutY="12.0" prefHeight="526.0" prefWidth="578.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 6, 0, 0, 0);">
+                                 <children>
+                                    <TextField fx:id="search" layoutX="156.0" layoutY="22.0" prefHeight="26.0" prefWidth="265.0" style="-fx-background-color: transparent; -fx-border-color: #096ce4; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-font-size: 13px; -fx-font-family: Tahoma;" />
+                                    <TableView fx:id="tab_pat" layoutX="13.0" layoutY="71.0" onMouseClicked="#handlePatientSelection" prefHeight="444.0" prefWidth="552.0" style="-fx-padding: 0px; -fx-background-color: transparent; -fx-border-color: #096ce4; -fx-border-width: 2px;">
+                                       <columns>
+                                          <TableColumn fx:id="col_cin" minWidth="6.4000244140625" prefWidth="118.39996337890625" style="-fx-background-color: #43b0f8;" text="CIN" />
+                                          <TableColumn fx:id="col_nom" minWidth="6.4000244140625" prefWidth="107.20001220703125" style="-fx-background-color: #43b0f8;" text="Nom" />
+                                          <TableColumn fx:id="col_pren" minWidth="6.4000244140625" prefWidth="104.00006103515625" style="-fx-background-color: #43b0f8;" text="Prenom" />
+                                          <TableColumn fx:id="col_sexe" minWidth="6.4000244140625" prefWidth="74.39996337890625" style="-fx-background-color: #43b0f8;" text="Sexe" />
+                                          <TableColumn fx:id="col_tel" minWidth="6.4000244140625" prefWidth="142.40008544921875" style="-fx-background-color: #43b0f8;" text="Tel" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

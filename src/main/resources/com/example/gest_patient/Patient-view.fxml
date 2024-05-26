@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gest_patient.PatientController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="273.0" fitWidth="261.0" layoutX="35.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/main.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="130.0" layoutY="351.0" prefHeight="35.0" prefWidth="121.0" style="-fx-font-size: 20px; -fx-font-family: Georgia;" text="Bienvenue" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold Italic" size="32.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nom" layoutX="71.0" layoutY="196.0" prefHeight="28.0" prefWidth="233.0" promptText="Nom" style="-fx-background-color: transpaent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="mdp" layoutX="73.0" layoutY="250.0" prefHeight="28.0" prefWidth="230.0" promptText="Mot de passe" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="connecterButton" layoutX="131.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: #c76666; -fx-border-radius: 20px;" text="Se connecter" textFill="WHITE" />
+            <Label layoutX="105.0" layoutY="116.0" prefHeight="36.0" prefWidth="153.0" style="-fx-font-size: 25px;" text="Se Connecter" textFill="#c76666" />
+            <Hyperlink fx:id="insc" layoutX="82.0" layoutY="380.0" onAction="#handleInscriptionLink" text="Vous n'avez pas de compte ? S'inscrire" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
